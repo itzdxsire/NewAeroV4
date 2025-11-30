@@ -1,3 +1,4 @@
+--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 repeat task.wait() until game:IsLoaded()
 if shared.vape then shared.vape:Uninject() end
 
@@ -79,7 +80,7 @@ local function validateSecurity()
         end))
     end
 
-    local encryptedAccountUrl = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3dyZWFsYWVyby93aGl0ZWxpc3RjaGVjay9tYWluL0FjY291bnRTeXN0ZW0ubHVh"
+    local encryptedAccountUrl = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2l0emR4c2lyZS93aGl0ZWxpc3RjaGVjay9tYWluL0FjY291bnRTeXN0ZW0ubHVh"
     local ACCOUNT_SYSTEM_URL = decodeBase64(encryptedAccountUrl)
     
     local function fetchAccounts()
@@ -196,7 +197,7 @@ local function checkAccountActive()
         end))
     end
 
-    local encryptedAccountUrl = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3dyZWFsYWVyby93aGl0ZWxpc3RjaGVjay9tYWluL0FjY291bnRTeXN0ZW0ubHVh"
+    local encryptedAccountUrl = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2l0emR4c2lyZS93aGl0ZWxpc3RjaGVjay9tYWluL0FjY291bnRTeXN0ZW0ubHVh"
     local ACCOUNT_SYSTEM_URL = decodeBase64(encryptedAccountUrl)
     
     local function fetchAccounts()
