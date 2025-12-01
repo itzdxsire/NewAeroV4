@@ -3,6 +3,7 @@
 --This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 --This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 --This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
+--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 
 local run = function(func)
 	func()
@@ -816,10 +817,6 @@ run(function()
 					if Reach.Enabled or HitBoxes.Enabled then
 						attackTable.validate.raycast = attackTable.validate.raycast or {}
 						attackTable.validate.selfPosition.value += CFrame.lookAt(selfpos, targetpos).LookVector * math.max((selfpos - targetpos).Magnitude - 14.399, 0)
-					end
-
-					if suc and plr then
-						if not select(2, whitelist:get(plr)) then return end
 					end
 
 					return call:SendToServer(attackTable, ...)
@@ -2844,10 +2841,6 @@ run(function()
 			
 			attackTable.validate.targetPosition = attackTable.validate.targetPosition or {value = targetpos}
 			attackTable.validate.selfPosition = attackTable.validate.selfPosition or {value = selfpos}
-		end
-
-		if suc and plr then
-			if not select(2, whitelist:get(plr)) then return end
 		end
 
 		return AttackRemote:SendToServer(attackTable, ...)
